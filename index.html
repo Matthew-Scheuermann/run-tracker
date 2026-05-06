@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Run Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <!--Section 1: Header -->
+    <header>
+        <h1>Run Tracker</h1>
+    </header>
+
+    <!-- Section 2: Input Form -->
+    <section id="log-form">
+        <h2>Log a Run</h2>
+
+        <label for="run-date">Date</label>
+        <input type="date" id="run-date"/>
+
+        <label for="run-distance">Distance (miles)</label>
+        <input type="number" id="run-distance" placeholder="e.g. 3.1" step="0.01"/>
+
+        <label for="run hours">Time</label>
+        <input type="number" id="run-hours" placeholder="HH" min="0" max="23"/>
+        <input type="number" id="run-minutes" placeholder="MM" min="0" max="59"/>
+        <input type="number" id="run-seconds" placeholder="SS" min="0" max="59"/>
+
+        <label for="run-notes">Notes (optional)</label>
+        <input type="text" id="run-notes" placeholder="e.g. felt great, hilly route"/>
+
+        <button id="submit-run">Log Run</button>
+    </section>
+
+    <!-- Section 3: Stats Bar -->
+    <section id="stats">
+        <h2>My Stats</h2>
+        <div id="stats-container">
+            <div class="stat-box">
+                <h3>Total Runs</h3>
+                <p id="total-runs">0</p>
+            </div>
+
+            <div class="stat-box">
+                <h3>Total Miles</h3>
+                <p id="total-miles">0</p>
+            </div>
+
+            <div class="stat-box">
+                <h3>Avg Pace</h3>
+                <p id="avg-pace">--:--</p>
+            </div>
+
+            <div class="stat-box">
+                <h3>Longest Run</h3>
+                <p id="longest-run">0</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Run Log Table -->
+    <section id="run-log">
+        <h2>Run Log</h2>
+        <table id="run-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Distance (mi)</th>
+                    <th>Time</th>
+                    <th>Pace (min/mi)</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody id="run-table-body">
+
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Section 5: Progress Chart -->
+    <section id="chart">
+        <h2>Progress</h2>
+        <canvas id="run-chart"></canvas>
+    </section>
+
+
+    <script src="script.js"></script>
+
+
+  </body>
+</html>
